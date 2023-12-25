@@ -7,28 +7,29 @@ Enter any string: nayan
 Output:
 Given string is a Palindrome.
 */
-#include <stdio.h>
-#include <string.h>
- 
-int main()
-{
-    char a[100];  
-    int i,length,d=0;
- 
-    printf("Enter the name : ");
-    gets(a);
-    
-    length=strlen(a);
- 
-    for(i=0;i<length;i++)  
-    {
-    	if(a[i]==a[length-i-1])
-    	d++;
- 	}
- 	if(d==i){
- 		printf("string is palindrome");
-	 } 
-    else{
-    	printf("string is not palindrome");
+#include<stdio.h>
+
+void main(){
+	
+	char a[50];
+	int i,b=0,c=1;
+	
+	printf("Enter your name :");
+	gets(a);
+	
+	          
+	for(i=0; a[i]!='\0'; i++){
+		b++;
 	}
+	for(i=0; i<b/2; i++){
+		if(a[i] != a[b-1-i]){
+			c=0;
+		}
+	}
+	if (c==1){
+		printf("Given name is a Palindrome...");
+	}else{
+		printf("Given name is note Palindrome..");
+	}
+
 }
